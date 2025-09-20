@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Showcase</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        input {
+            margin: 5px 0;
+            padding: 8px;
+            width: 250px;
+            display: block;
+        }
+        button {
+            margin-top: 10px;
+            padding: 8px 16px;
+            border: none;
+            background-color: #0400ff;
+            color: white;
+            font-size: 15px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        #output {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f2f2f2;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h2>String Showcase: My Basic Info</h2>
+
+    <!-- Input fields -->
+    Name: <input type="text" id="name" placeholder="Enter your name">
+    Age: <input type="number" id="age" placeholder="Enter your age">
+    School: <input type="text" id="school" placeholder="Enter your school">
+
+    <!-- Button -->
+    <button type="button" py-click="generate_message">Generate Message</button>
+
+    <!-- Output area -->
+    <div id="output"></div>
+
+        <!-- PyScript config -->
+    <py-config>
+        [[fetch]]
+        files = ["main.py"]
+    </py-config>
+
+
+    <script type="py" src="main.py"></script>
+</body>
+</html>
